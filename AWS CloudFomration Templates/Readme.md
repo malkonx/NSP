@@ -1,1 +1,12 @@
+McAfee® vNSP is a complete intrusion detection and prevention system designed for the cloud.
 
+Network Security Platform for AWS is a solution that protects instances in AWS environment from
+threats arising from outside the network or within.
+
+To protect your virtual machines in the AWS environment, the following components of Network
+Security Platform are deployed:
+
+- Network Security Manager
+- McAfee Cloud Controller
+- Virtual IPS Sensor
+- McAfee Virtual Probe
