@@ -1,0 +1,7 @@
+<p style="text-align: justify;">This template will deploy McAfee Virtual IPS sensor in Azure Scale Set.</p>
+
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+
+<p style="text-align: justify;">The Virtual IPS Sensors (Sensors) are scalable and flexible content processing virtual appliances built for the accurate detection and prevention of intrusions, misuse, and malware. Sensors are specifically designed to handle large amounts of traffic efficiently, without acting as a choke-point, to inspect and detect intrusions with a high degree of accuracy. When deployed, a Sensor provides real-time traffic monitoring to detect and respond to malicious activity in selected network segments.</p>
+<p style="text-align: justify;">Virtual IPS Sensors examine the header and data portions of every network packet, looking for patterns and behavior in the network traffic that indicate malicious activity. Sensors examine packets and match them against the applied policies. These policies determine what attacks to watch for and how to respond with countermeasures if an attack is detected. </p>
+<p style="text-align: justify;">A Sensor can perform many types of attack responses, including generating alerts and packet logs, resetting TCP connections, &ldquo;scrubbing&rdquo; malicious packets, and even blocking attack packets entirely before they reach the intended target.</p>
