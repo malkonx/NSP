@@ -15,10 +15,10 @@
 <h2>Deployment</h2>
 <p>To deploy the vNSP Controller using the template, perform the following steps:</p>
 <ol>
-<li>In the Github page, click McAfee Controller.</li>
-<li>The Controller template page opens.</li>
-<li>Click Deploy to Azure.</li>
-<li>The Deploy to Azure page opens.</li>
+<li>In the <strong>Github</strong> page, click <strong>McAfee Controller</strong>.</li>
+<li>The <strong>McAfee Controller</strong> template page opens.</li>
+<li>Click <strong>Deploy to Azure</strong>.</li>
+<li>The <strong>Deploy to Azure</strong> page opens.</li>
 <li>Enter the details for the Controller:</li>
 </ol>
 <table>
@@ -52,7 +52,7 @@
 <p><strong>Resource Group</strong></p>
 </td>
 <td width="420">
-<p>Select the Resource Group where the Controller has to be deployed.</p>
+<p>Select the Resource Group where the Controller should be deployed.</p>
 </td>
 </tr>
 <tr>
@@ -93,6 +93,7 @@
 </td>
 <td width="420">
 <p>Enter a password for the Controller virtual machine.</p>
+<p><strong>Note:</strong> Only SSH public key authentication type is supported for Controllers.</p>
 </td>
 </tr>
 <tr>
@@ -101,6 +102,43 @@
 </td>
 <td width="420">
 <p>Enter the custom data for the Controller as {"Primary NSM IP":"10.x.x.x", "Controller Name":"controller_name", "Controller Shared Key":"passphrase"}. When using an MDR pair, provide the user data as {"Primary NSM IP":"10.x.x.x", "Secondary NSM IP":"10.x.x.x", "Controller Name":"controller_name", "Controller Shared Key":"passphrase"}.</p>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="155">
+<p>Primary NSM IP</p>
+</td>
+<td width="250">
+<p>IP address of the primary Manager</p>
+</td>
+</tr>
+<tr>
+<td width="155">
+<p>Secondary NSM IP</p>
+</td>
+<td width="250">
+<p>IP address of the secondary Manager</p>
+</td>
+</tr>
+<tr>
+<td width="155">
+<p>Controller Name</p>
+</td>
+<td width="250">
+<p>Name of the Controller defined in the Manager</p>
+</td>
+</tr>
+<tr>
+<td width="155">
+<p>Controller Shared Key</p>
+</td>
+<td width="250">
+<p>Shared secret key of the Controller provided in the Manager</p>
+</td>
+</tr>
+</tbody>
+</table>
 </td>
 </tr>
 <tr>
@@ -121,22 +159,14 @@
 </tr>
 <tr>
 <td width="204">
-<p><strong>Subnet 1</strong></p>
+<p><strong>Subnet Name</strong></p>
 </td>
 <td width="420">
 <p>Enter the subnet where the Controller should be deployed.</p>
-</td>
-</tr>
-<tr>
-<td width="204">
-<p><strong>Subnet 2</strong></p>
-</td>
-<td width="420">
-<p>&nbsp;</p>
 </td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
 <h2>Support</h2>
-<p>The Controller template is not supported by McAfee through the usual support modes as McAfee Technical Support. The templates will be updated on a best-effort basis and any troubleshooting in case of template deployed failure will not be supported by McAfee.</p>
+<p>The Controller template is not supported by McAfee through the usual support modes which is McAfee Technical Support. The templates will be updated on a best-effort basis and any troubleshooting in case of template deployment failure will not be supported by McAfee.</p>
