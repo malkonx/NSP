@@ -1,5 +1,4 @@
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
-
+<p>[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)</p>
 <h1>Virtual IPS Sensor deployment as VM scale sets with single interface</h1>
 <p>The Virtual IPS Sensors are high-performance, scalable, and flexible content processing appliances built for accurate detection and prevention of intrusions. To provide high availability for Sensors in Azure cloud, you can deploy the Sensors in a VM scale set. Depending on the threshold set for parameters, the Sensors are either scaled out or scaled in. For example, if you have set a threshold for CPU utilization, depending on the CPU utilization the Sensors are scaled out in case of high CPU utilization and scaled in for low CPU utilization. When there is a Sensor virtual machine failure, a new Sensor is deployed in its place to manage the traffic. You can deploy the Sensor in Azure cloud using the Azure CLI commands or by using the basic Sensor template provided by McAfee. You can further customize the template to suit your network requirements by downloading the json file that contains the basic template. The following template deploys the Virtual IPS Sensor as a VM scale set with a single interface.</p>
 <h2>Documentation</h2>
@@ -51,7 +50,7 @@
 <p><strong>Resource Group</strong></p>
 </td>
 <td width="420">
-<p>Select the Resource Group where the Virtual IPS Sensor should be deployed.</p>
+<p>Select the Resource Group where the Virtual IPS Sensor should be deployed. Do not select the option to Create a new Resource Group.</p>
 </td>
 </tr>
 <tr>
@@ -151,7 +150,7 @@
 </tr>
 <tr>
 <td width="204">
-<p><strong>Virtual Network Name</strong></p>
+<p><strong>Existing Vnet Name</strong></p>
 </td>
 <td width="420">
 <p>Enter the virtual network name where the Virtual IPS Sensor should be deployed.</p>
@@ -159,7 +158,7 @@
 </tr>
 <tr>
 <td width="204">
-<p><strong>Virtual Network Resource Group Name</strong></p>
+<p><strong>Existing Vnet Resource Group Name</strong></p>
 </td>
 <td width="420">
 <p>Enter the virtual network resource group name.</p>
@@ -167,7 +166,7 @@
 </tr>
 <tr>
 <td width="204">
-<p><strong>Subnet Name</strong></p>
+<p><strong>Existing Subnet Name</strong></p>
 </td>
 <td width="420">
 <p>Enter the subnet where the Virtual IPS Sensor should be deployed.</p>

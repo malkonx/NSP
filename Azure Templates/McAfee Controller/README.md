@@ -1,5 +1,6 @@
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
+<p>[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)</p>
 <h1>Controller deployment</h1>
 <p>The vNSP Controller is deployed as a virtual machine in Azure cloud. You can deploy the Controller in Azure cloud using the Azure CLI commands or by using the basic Controller template provided by McAfee. You can further customize the template to suit your network requirements by downloading the json file that contains the basic template.</p>
 <h2>Documentation</h2>
@@ -52,7 +53,7 @@
 <p><strong>Resource Group</strong></p>
 </td>
 <td width="420">
-<p>Select the Resource Group where the Controller should be deployed.</p>
+<p>Select the Resource Group where the Controller should be deployed. Do not select the option to create a new Resource Group.</p>
 </td>
 </tr>
 <tr>
@@ -89,10 +90,10 @@
 </tr>
 <tr>
 <td width="204">
-<p><strong>Admin Password</strong></p>
+<p><strong>SSH Key Data</strong></p>
 </td>
 <td width="420">
-<p>Enter a password for the Controller virtual machine.</p>
+<p>Enter SSH key data for the Controller virtual machine.</p>
 <p><strong>Note:</strong> Only SSH public key authentication type is supported for Controllers.</p>
 </td>
 </tr>

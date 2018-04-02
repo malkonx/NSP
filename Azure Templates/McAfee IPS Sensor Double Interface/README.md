@@ -1,5 +1,4 @@
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
-
+<p>[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)</p>
 <h1>Virtual IPS Sensor deployment with double interface</h1>
 <p>The Virtual IPS Sensors are high-performance, scalable, and flexible content processing appliances built for accurate detection and prevention of intrusions. Virtual IPS Sensors are deployed as a virtual machine in Azure cloud. You can deploy the Sensor in Azure cloud using the Azure CLI commands or by using the basic Sensor template provided by McAfee. The Virtual IPS Sensors can be deployed with single interface or double interface. In a single interface Sensor deployment, both management traffic and data traffic uses a single interface. In a double interface Sensor deployment, the management traffic uses one interface and the data traffic uses another interface for traffic flow. You can further customize the template to suit your network requirements by downloading the json file that contains the basic template. The following template deploys the Virtual IPS Sensor with a double interface.</p>
 <h2>Documentation</h2>
@@ -51,7 +50,7 @@
 <p><strong>Resource Group</strong></p>
 </td>
 <td width="420">
-<p>Select the Resource Group where the Virtual IPS Sensor should be deployed.</p>
+<p>Select the Resource Group where the Virtual IPS Sensor should be deployed. Do not select the option to create a new Resource Group.</p>
 </td>
 </tr>
 <tr>
