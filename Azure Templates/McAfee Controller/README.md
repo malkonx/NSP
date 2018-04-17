@@ -100,10 +100,10 @@
 </tr>
 <tr>
 <td width="204">
-<p><strong>Admin Password</strong></p>
+<p><strong>Admin SSHKey</strong></p>
 </td>
 <td width="420">
-<p>Enter a password for the Controller virtual machine.</p>
+<p>Enter ssh public key for the Controller virtual machine.</p>
 <p><strong>Note:</strong> Only SSH public key authentication type is supported for Controllers.</p>
 </td>
 </tr>
