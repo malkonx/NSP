@@ -14,6 +14,17 @@
 <h2>Deployment</h2>
 <p>To deploy the Virtual IPS Sensor with a double interface using the template, perform the following steps:</p>
 <ol>
+<li>Log in to the machine which has the Azure CLI installed on it.</li>
+</ol>
+<p>If you are logging in to the Azure CLI for the first time, execute the following command:</p>
+<p>az login</p>
+<ol start="2">
+<li>Execute az vm image list --all -p mfe_azure --sku mcafee-vnsp-azure-ips-sensor-byol.</li>
+</ol>
+<p>Note the urn generated for the Virtual IPS Sensor image.</p>
+<ol start="3">
+<li>Execute az vm image accept-terms --urn &lt;sensor_image_urn&gt;.</li>
+<li>Go to <a href="https://github.com/mcafee/NSP/tree/master/Azure%20Templates">McAfee Github for vNSP on Azure</a> where the vNSP component templates are available.</li>
 <li>In the <strong>Github</strong> page, click <strong>McAfee IPS Sensor Single Interface</strong>.</li>
 <li>The <strong>McAfee IPS Sensor Single Interface</strong> template page opens.</li>
 <li>Click <strong>Deploy to Azure</strong>.</li>
@@ -51,7 +62,7 @@
 <p><strong>Resource Group</strong></p>
 </td>
 <td width="420">
-<p>Select the Resource Group where the Virtual IPS Sensor should be deployed. Do not select the option to create a new Resource Group.</p>
+<p>Select the Resource Group where the Virtual IPS Sensor should be deployed.</p>
 </td>
 </tr>
 <tr>
