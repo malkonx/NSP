@@ -111,7 +111,7 @@
 <p><strong>Custom Data</strong></p>
 </td>
 <td width="420">
-<p>Enter the custom data for the Virtual IPS Sensor as {"Primary NSM IP":"10.x.x.x", "Cluster Name":"Cluster_Name", "Sensor Shared Key":"passphrase", "dataSubnet":"subnet2"}. When using an MDR pair, provide the user data as {"Primary NSM IP":"10.x.x.x", "Secondary NSM IP":"10.x.x.x", "Cluster Name":"Cluster_Name", "Sensor Shared Key":"passphrase", "dataSubnet":"subnet2"}.</p>
+<p>Enter the custom data for the Virtual IPS Sensor as {"Primary NSM IP":"10.x.x.x", "Cluster Name":"Cluster_Name", "Sensor Shared Key":"passphrase"}. When using an MDR pair, provide the user data as {"Primary NSM IP":"10.x.x.x", "Secondary NSM IP":"10.x.x.x", "Cluster Name":"Cluster_Name", "Sensor Shared Key":"passphrase&rdquo;}.</p>
 <p>&nbsp;</p>
 <table>
 <tbody>
@@ -145,14 +145,6 @@
 </td>
 <td width="250">
 <p>Shared secret key to establish trust with the Sensor</p>
-</td>
-</tr>
-<tr>
-<td width="155">
-<p>dataSubnet</p>
-</td>
-<td width="250">
-<p>Second subnet which the Sensor uses for monitoring traffic</p>
 </td>
 </tr>
 </tbody>
