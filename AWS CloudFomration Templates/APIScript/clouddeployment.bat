@@ -16,7 +16,7 @@ for /F "tokens=3 delims=: " %%H in ('sc query "NetworkSecurityManager" ^| findst
     goto :checkNSMloop
   ) else (
 	echo [%date%, %time%] NSM has started >> "C:\Program Files\McAfee\Network Security Manager\App\clouddeployment.log"
-    python C:\Users\Administrator\Desktop\ScriptFiles\cloudAPIAutomation.py
+    python "C:\Program Files\McAfee\Network Security Manager\App\diag\ScriptFiles\cloudAPIAutomation.py"
   )
 )
 :checkNSMfail
