@@ -1,4 +1,5 @@
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+
 <h1>Virtual IPS Sensor deployment with single interface</h1>
 <p>The Virtual IPS Sensors are high-performance, scalable, and flexible content processing appliances built for accurate detection and prevention of intrusions. Virtual IPS Sensors are deployed as a virtual machine in Azure cloud. You can deploy the Sensor in Azure cloud using the Azure CLI commands or by using the basic Sensor template provided by McAfee. The Virtual IPS Sensors can be deployed with single interface or double interface. In a single interface Sensor deployment, both management traffic and data traffic uses a single interface. In a double interface Sensor deployment, the management traffic uses one interface and the data traffic uses another interface for traffic flow. You can further customize the template to suit your network requirements by downloading the json file that contains the basic template. The following template deploys the Virtual IPS Sensor with a single interface.</p>
 <h2>Documentation</h2>
@@ -6,145 +7,145 @@
 <h2>Pre-requisites</h2>
 <p>Following are the pre-requisites to deploy a Virtual IPS Sensor with single interface using the Azure Resource Manager (ARM) template:</p>
 <ul>
-<li>vNSP Cluster should be created in the Network Security Manager where the Virtual IPS Sensor will be deployed. For more information on creating a vNSP Cluster in the Network Security Manager, see the topic <em>&ldquo;Create a vNSP Cluster for Azure&rdquo;</em> in the <em>&ldquo;Virtual IPS Administration Guide</em>&rdquo;.</li>
-<li>Subscription, Resource Group, Virtual Network, and Subnet along with the Network Security Group should be defined before deploying the Virtual IPS Sensor.</li>
-<li>Make sure to open the ports required for Virtual IPS Sensor to communicate with the Network Security Manager. For more information on the ports required for Sensor and Manager communication, see the topic &ldquo;<em>Requirements to deploy Network Security Platform in Azure environment&rdquo;</em> in the <em>&ldquo;Virtual IPS Administration Guide</em>&rdquo;.</li>
+<li style="text-indent: -.25in;">vNSP Cluster should be created in the Network Security Manager where the Virtual IPS Sensor will be deployed. For more information on creating a vNSP Cluster in the Network Security Manager, see the topic <em>&ldquo;Create a vNSP Cluster for Azure&rdquo;</em> in the <em>&ldquo;Virtual IPS Administration Guide</em>&rdquo;.</li>
+<li style="text-indent: -.25in;">Subscription, Resource Group, Virtual Network, and Subnet along with the Network Security Group should be defined before deploying the Virtual IPS Sensor.</li>
+<li style="text-indent: -.25in;">Make sure to open the ports required for Virtual IPS Sensor to communicate with the Network Security Manager. For more information on the ports required for Sensor and Manager communication, see the topic &ldquo;<em>Requirements to deploy Network Security Platform in Azure environment&rdquo;</em> in the <em>&ldquo;Virtual IPS Administration Guide</em>&rdquo;.</li>
 </ul>
 <h2>Deployment</h2>
 <p>To deploy the Virtual IPS Sensor with a single interface using the template, perform the following steps:</p>
 <ol>
-<li>Log in to the machine which has the Azure CLI installed on it.</li>
+<li style="text-indent: -.25in;">Log in to the machine which has the Azure CLI installed on it.</li>
 </ol>
 <p>If you are logging in to the Azure CLI for the first time, execute the following command:</p>
-<p>az login</p>
+<p><span style="font-size: 10.0pt; line-height: 107%; font-family: 'Courier New';">az login</span></p>
 <ol start="2">
-<li>Execute az vm image list --all -p mfe_azure --sku mcafee-vnsp-azure-ips-sensor-byol.</li>
+<li style="text-indent: -.25in;">Execute <span style="font-size: 10.0pt; line-height: 107%; font-family: 'Courier New';">az vm image list --all -p mfe_azure --sku mcafee-vnsp-azure-ips-sensor-byol</span>.</li>
 </ol>
 <p>Note the urn generated for the Virtual IPS Sensor image.</p>
 <ol start="3">
-<li>Execute az vm image accept-terms --urn &lt;sensor_image_urn&gt;.</li>
-<li>Go to <a href="https://github.com/mcafee/NSP/tree/master/Azure%20Templates">McAfee Github for vNSP on Azure</a> where the vNSP component templates are available.</li>
-<li>In the <strong>Github</strong> page, click <strong>McAfee IPS Sensor Single Interface</strong>.</li>
-<li>The <strong>McAfee IPS Sensor Single Interface</strong> template page opens.</li>
-<li>Click <strong>Deploy to Azure</strong>.</li>
-<li>The <strong>Deploy to Azure</strong> page opens.</li>
-<li>Enter the details for the Virtual IPS Sensor:</li>
+<li style="text-indent: -.25in;">Execute <span style="font-size: 10.0pt; line-height: 107%; font-family: 'Courier New';">az vm image accept-terms --urn &lt;sensor_image_urn&gt;</span>.</li>
+<li style="text-indent: -.25in;">Go to <a href="https://github.com/mcafee/NSP/tree/master/Azure%20Templates">McAfee Github for vNSP on Azure</a> where the vNSP component templates are available.</li>
+<li style="text-indent: -.25in;">In the <strong>Github</strong> page, click <strong>McAfee IPS Sensor Single Interface</strong>.</li>
+<li style="text-indent: -.25in;">The <strong>McAfee IPS Sensor Single Interface</strong> template page opens.</li>
+<li style="text-indent: -.25in;">Click <strong>Deploy to Azure</strong>.</li>
+<li style="text-indent: -.25in;">The <strong>Deploy to Azure</strong> page opens.</li>
+<li style="text-indent: -.25in;">Enter the details for the Virtual IPS Sensor:</li>
 </ol>
-<table>
+<table style="border-collapse: collapse; border: none;">
 <tbody>
 <tr>
-<td width="204">
-<p><strong>Options</strong></p>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; background: #D9D9D9; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Options</strong></p>
 </td>
-<td width="420">
-<p><strong>Definition</strong></p>
-</td>
-</tr>
-<tr>
-<td width="204">
-<p><strong>Directory</strong></p>
-</td>
-<td width="420">
-<p>Select the directory for your account.</p>
+<td style="width: 314.75pt; border: solid windowtext 1.0pt; border-left: none; background: #D9D9D9; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Definition</strong></p>
 </td>
 </tr>
 <tr>
-<td width="204">
-<p><strong>Subscription</strong></p>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Directory</strong></p>
 </td>
-<td width="420">
-<p>Select the subscription for your account.</p>
-</td>
-</tr>
-<tr>
-<td width="204">
-<p><strong>Resource Group</strong></p>
-</td>
-<td width="420">
-<p>Select the Resource Group where the Virtual IPS Sensor should be deployed.</p>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Select the directory for your account.</p>
 </td>
 </tr>
 <tr>
-<td width="204">
-<p><strong>Resource Group Name</strong></p>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Subscription</strong></p>
 </td>
-<td width="420">
-<p>Enter the Resource Group Name.</p>
-</td>
-</tr>
-<tr>
-<td width="204">
-<p><strong>Virtual Machine Name</strong></p>
-</td>
-<td width="420">
-<p>Enter the virtual machine name for the Virtual IPS Sensor.</p>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Select the subscription for your account.</p>
 </td>
 </tr>
 <tr>
-<td width="204">
-<p><strong>Virtual Machine Size</strong></p>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Resource Group</strong></p>
 </td>
-<td width="420">
-<p>Enter the virtual machine size as <strong>F8S Standard</strong>.</p>
-</td>
-</tr>
-<tr>
-<td width="204">
-<p><strong>Admin Username</strong></p>
-</td>
-<td width="420">
-<p>Enter a username for the Virtual IPS Sensor virtual machine.</p>
-<p><strong>Note:</strong> The Virtual IPS Sensor name should not exceed 25 characters.</p>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Select the Resource Group where the Virtual IPS Sensor should be deployed.</p>
 </td>
 </tr>
 <tr>
-<td width="204">
-<p><strong>Admin Password</strong></p>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Resource Group Name</strong></p>
 </td>
-<td width="420">
-<p>Enter a password for the Virtual IPS Sensor virtual machine.</p>
-<p><strong>Note:</strong> Only password authentication type is supported for Sensors.</p>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter the Resource Group Name.</p>
 </td>
 </tr>
 <tr>
-<td width="204">
-<p><strong>Custom Data</strong></p>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Virtual Machine Name</strong></p>
 </td>
-<td width="420">
-<p>Enter the custom data for the Virtual IPS Sensor as {"Primary NSM IP":"10.x.x.x", "Cluster Name": "Cluster_Name", "Sensor Shared Key":"passphrase"}. When using an MDR pair, provide the user data as {"Primary NSM IP":"10.x.x.x", "Secondary NSM IP":"10.x.x.x", "Cluster Name": "Cluster_Name", "Sensor Shared Key":"passphrase"}.</p>
-<p>&nbsp;</p>
-<table>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter the virtual machine name for the Virtual IPS Sensor.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Virtual Machine Size</strong></p>
+</td>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter the virtual machine size as <strong>Standard_F8s</strong>.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Admin Username</strong></p>
+</td>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter a username for the Virtual IPS Sensor virtual machine.</p>
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Note:</strong> The Virtual IPS Sensor name should not exceed 25 characters.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Admin Password</strong></p>
+</td>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter a password for the Virtual IPS Sensor virtual machine.</p>
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Note:</strong> Only password authentication type is supported for Sensors.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Custom Data</strong></p>
+</td>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter the custom data for the Virtual IPS Sensor as <span style="font-size: 9.0pt; font-family: 'Courier New';">{"Primary NSM IP":"10.x.x.x", "Cluster Name": "Cluster_Name", "Sensor Shared Key":"passphrase"}. </span>When using an MDR pair, provide the user data as <span style="font-size: 9.0pt; font-family: 'Courier New';">{"Primary NSM IP":"10.x.x.x", "Secondary NSM IP":"10.x.x.x", "Cluster Name": "Cluster_Name", "Sensor Shared Key":"passphrase"}.</span></p>
+<p style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 9.0pt; font-family: 'Courier New';">&nbsp;</span></p>
+<table style="border-collapse: collapse; border: none;">
 <tbody>
 <tr>
-<td width="155">
-<p>Primary NSM IP</p>
+<td style="width: 116.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="155">
+<p style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 9.0pt; font-family: 'Courier New';">Primary NSM IP</span></p>
 </td>
-<td width="250">
-<p>IP address of the primary Manager</p>
-</td>
-</tr>
-<tr>
-<td width="155">
-<p>Secondary NSM IP</p>
-</td>
-<td width="250">
-<p>IP address of the secondary Manager</p>
+<td style="width: 187.45pt; padding: 0in 5.4pt 0in 5.4pt;" width="250">
+<p style="margin-bottom: .0001pt; line-height: normal;">IP address of the primary Manager</p>
 </td>
 </tr>
 <tr>
-<td width="155">
-<p>Cluster Name</p>
+<td style="width: 116.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="155">
+<p style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 9.0pt; font-family: 'Courier New';">Secondary NSM IP</span></p>
 </td>
-<td width="250">
-<p>Name of the Cluster in the Manager where the auto scale group will be launched</p>
+<td style="width: 187.45pt; padding: 0in 5.4pt 0in 5.4pt;" width="250">
+<p style="margin-bottom: .0001pt; line-height: normal;">IP address of the secondary Manager</p>
 </td>
 </tr>
 <tr>
-<td width="155">
-<p>Sensor Shared Key</p>
+<td style="width: 116.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="155">
+<p style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 9.0pt; font-family: 'Courier New';">Cluster Name</span></p>
 </td>
-<td width="250">
-<p>Shared secret key to establish trust with the Sensor</p>
+<td style="width: 187.45pt; padding: 0in 5.4pt 0in 5.4pt;" width="250">
+<p style="margin-bottom: .0001pt; line-height: normal;">Name of the Cluster in the Manager where the auto scale group will be launched</p>
+</td>
+</tr>
+<tr>
+<td style="width: 116.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="155">
+<p style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 9.0pt; font-family: 'Courier New';">Sensor Shared Key</span></p>
+</td>
+<td style="width: 187.45pt; padding: 0in 5.4pt 0in 5.4pt;" width="250">
+<p style="margin-bottom: .0001pt; line-height: normal;">Shared secret key to establish trust with the Sensor</p>
 </td>
 </tr>
 </tbody>
@@ -152,27 +153,27 @@
 </td>
 </tr>
 <tr>
-<td width="204">
-<p><strong>Virtual Network Name</strong></p>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Virtual Network Name</strong></p>
 </td>
-<td width="420">
-<p>Enter the virtual network name where the Virtual IPS Sensor should be deployed.</p>
-</td>
-</tr>
-<tr>
-<td width="204">
-<p><strong>Virtual Network Resource Group Name</strong></p>
-</td>
-<td width="420">
-<p>Enter the virtual network resource group name.</p>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter the virtual network name where the Virtual IPS Sensor should be deployed.</p>
 </td>
 </tr>
 <tr>
-<td width="204">
-<p><strong>Subnet Name</strong></p>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Virtual Network Resource Group Name</strong></p>
 </td>
-<td width="420">
-<p>Enter the subnet where the Virtual IPS Sensor should be deployed.</p>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter the virtual network resource group name.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 152.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt;" width="204">
+<p style="margin-bottom: .0001pt; line-height: normal;"><strong>Subnet Name</strong></p>
+</td>
+<td style="width: 314.75pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt;" width="420">
+<p style="margin-bottom: .0001pt; line-height: normal;">Enter the subnet where the Virtual IPS Sensor should be deployed.</p>
 </td>
 </tr>
 </tbody>
